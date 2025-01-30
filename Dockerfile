@@ -26,7 +26,7 @@ COPY . .
 # Build everything, with optimizations, with static linking, and using jemalloc
 RUN swift build -c release \
     --static-swift-stdlib \
-    -Xlinker -ljemalloc
+    -Xlinker
 
 # Switch to the staging area
 WORKDIR /staging
